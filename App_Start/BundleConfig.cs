@@ -11,18 +11,25 @@ namespace MusicStore
 			bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
 						"~/Scripts/jquery-{version}.js"));
 
-			// Use the development version of Modernizr to develop with and learn from. Then, when you're
-			// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-						"~/Scripts/modernizr-*"));
+			bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                        "~/Scripts/angular.js",
+                        "~/Scripts/angular-route.js"));
 
-			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+			bundles.Add(new ScriptBundle("~/bundles/bootstrap/js").Include(
 					  "~/Scripts/bootstrap.js",
 					  "~/Scripts/respond.js"));
 
-			bundles.Add(new StyleBundle("~/Content/css").Include(
-					  "~/Content/bootstrap.css",
-					  "~/Content/site.css"));
-		}
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap/css").Include(
+                      "~/Content/bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/musicApp/js").Include(
+                      "~/Assets/Modules/*.js",
+                      "~/Assets/Services/*.js",
+                      "~/Assets/Controllers/*.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/musicApp/css").Include(
+                      "~/Content/Site.css"));
+
+        }
 	}
 }
