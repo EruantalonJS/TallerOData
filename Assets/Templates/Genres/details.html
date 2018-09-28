@@ -1,0 +1,11 @@
+﻿<div ng-controller="genreDetailsController">
+    <h4>Genres</h4>
+    <h3>{{genre.name}}</h3>
+    <div>Description: {{genre.description}}</div>
+    <br />
+    <div ng-include="'/Assets/Templates/Genres/edit.html'"></div>
+    <br />
+    <a href="#/genres/list/" class="btn btn-info btn-default">Back to List</a>
+    <button class="btn btn-default btn-sm" ng-click="edit()">Edit genre details</button>
+</div>
+

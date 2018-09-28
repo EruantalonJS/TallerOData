@@ -20,12 +20,12 @@ namespace MusicStore
 					  "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap/css").Include(
-                      "~/Content/bootstrap.js"));
+                      "~/Content/bootstrap.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/musicApp/js").Include(
-                      "~/Assets/Modules/*.js",
-                      "~/Assets/Services/*.js",
-                      "~/Assets/Controllers/*.js"));
+            bundles.Add(new ScriptBundle("~/bundles/musicApp/js")
+                   .IncludeDirectory("~/Assets/Modules", "*.js", true)
+                   .IncludeDirectory("~/Assets/Services", "*.js", true)
+                   .IncludeDirectory("~/Assets/Controllers", "*.js", true));
 
             bundles.Add(new StyleBundle("~/bundles/musicApp/css").Include(
                       "~/Content/Site.css"));

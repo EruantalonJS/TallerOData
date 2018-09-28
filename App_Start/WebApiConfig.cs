@@ -21,8 +21,9 @@ namespace MusicStore
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-			//var cors = new EnableCorsAttribute("http://localhost:63249", "*", "*");
-			//config.EnableCors(cors);
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
         }
     }
 }

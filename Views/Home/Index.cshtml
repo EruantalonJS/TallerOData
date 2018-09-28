@@ -13,8 +13,10 @@
     @Styles.Render("~/bundles/musicApp/css")
 
 </head>
-<body ng-app="theMusic">
-    <h2>Music store</h2>
+<body ng-app="musicStore">
+    <a href="#/genres/list/" class="btn btn-info btn-default">Genres</a>
+    <a href="#/artists/list/" class="btn btn-info btn-default">Artists</a>
+    <a href="#/albums/list/" class="btn btn-info btn-default">Albums</a>
     <div ng-view></div>
 </body>
 </html>
