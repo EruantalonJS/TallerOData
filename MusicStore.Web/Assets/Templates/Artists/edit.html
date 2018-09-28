@@ -1,0 +1,12 @@
+﻿<div class="row" ng-controller="artistEditController">
+    <div class="col-md-5">
+        <form ng-show="isEditable()">
+            <div class="form-group">
+                <label for="artist">Artist name</label>
+                <input name="artist" type="text" class="form-control" placeholder="Enter artist name" ng-model="edit.artist.name">
+            </div>
+            <button class="btn btn-primary" ng-click="save()">Save</button>
+            <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
+        </form>
+    </div>
+</div>

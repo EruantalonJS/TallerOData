@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Music Store</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap/js")
+    @Scripts.Render("~/bundles/musicApp/js")
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/musicApp/css")
+
+</head>
+<body ng-app="musicStore">
+    <a href="#/genres/list/" class="btn btn-info btn-default">Genres</a>
+    <a href="#/artists/list/" class="btn btn-info btn-default">Artists</a>
+    <a href="#/albums/list/" class="btn btn-info btn-default">Albums</a>
+    <div ng-view></div>
+</body>
+</html>
