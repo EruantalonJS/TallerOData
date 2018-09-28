@@ -1,0 +1,12 @@
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\MusicStore.Data.dll.config
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\MusicStore.Data.dll
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\MusicStore.Data.pdb
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\EntityFramework.dll
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\EntityFramework.xml
+C:\Code\MusicStore\MusicStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\MusicStore\MusicStore.Data\obj\Debug\MusicStore.Data.csprojAssemblyReference.cache
+C:\Code\MusicStore\MusicStore.Data\obj\Debug\MusicStore.Data.csproj.CoreCompileInputs.cache
+C:\Code\MusicStore\MusicStore.Data\obj\Debug\MusicStore.Data.csproj.CopyComplete
+C:\Code\MusicStore\MusicStore.Data\obj\Debug\MusicStore.Data.dll
+C:\Code\MusicStore\MusicStore.Data\obj\Debug\MusicStore.Data.pdb
