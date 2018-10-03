@@ -17,6 +17,5 @@ C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\bin\Debug\EntityFramewo
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\bin\Debug\EntityFramework.xml
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\obj\Debug\MusicStore.Data.csprojResolveAssemblyReference.cache
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\obj\Debug\MusicStore.Data.dll
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.Data\obj\Debug\MusicStore.Data.pdb

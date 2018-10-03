@@ -8,39 +8,45 @@ using System.Web.OData.Query;
 
 namespace MusicStore.Controllers.OData
 {
-    public class ODataGenresController: ODataController
+    public class ODataGenreDTOsController: ODataController
     {
         private readonly MusicStoreEntities dbContext = new MusicStoreEntities();
-        private const AllowedQueryOptions allowedQueryOptions = AllowedQueryOptions.Select
-                                                          | AllowedQueryOptions.OrderBy
-                                                          | AllowedQueryOptions.Expand; 
 
-        [EnableQuery(AllowedQueryOptions = allowedQueryOptions, MaxExpansionDepth =1)]
-        public IQueryable<Genre> Get()
+        [EnableQuery()]
+        public IQueryable<DTO.Genre> Get()
         {
-            return dbContext.Genres;
+            return dbContext.Genres
+                            .Select(DTO.Genre.SelectAsDTO());
         }
 
         [EnableQuery]
-        public SingleResult<Genre> Get([FromODataUri] int key)
+        public SingleResult<DTO.Genre> Get([FromODataUri] int key)
         {
-            IQueryable<Genre> result = dbContext.Genres.Where(p => p.GenreId == key);
+            IQueryable<DTO.Genre> result = dbContext.Genres
+                                                    .Where(p => p.GenreId == key)
+                                                    .Select(DTO.Genre.SelectAsDTO());
             return SingleResult.Create(result);
         }
 
         [EnableQuery]
-        public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<Genre> product)
+        public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<DTO.Genre> genre)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var entity = await dbContext.Genres.FindAsync(key);
+            var entity = await dbContext.Genres
+                                        .FindAsync(key);
+
             if (entity == null)
             {
                 return NotFound();
             }
-            product.Patch(entity);
+
+            DTO.Genre currentEntity = DTO.Genre.FromData(entity);
+            genre.Patch(currentEntity);
+            entity = currentEntity.ToData();
+
             try
             {
                 await dbContext.SaveChangesAsync();

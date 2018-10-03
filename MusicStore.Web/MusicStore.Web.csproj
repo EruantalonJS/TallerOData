@@ -149,6 +149,7 @@
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
+    <Compile Include="Controllers\ODataGenreDTOsController.cs" />
     <Compile Include="Controllers\ODataGenresController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -238,6 +239,10 @@
     <ProjectReference Include="..\MusicStore.Data\MusicStore.Data.csproj">
       <Project>{f224c913-129a-4b47-8fc5-5b93ab2e5028}</Project>
       <Name>MusicStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicStore.DTO\MusicStore.DTO.csproj">
+      <Project>{9726132d-9964-4a45-b1b4-36f610c1b332}</Project>
+      <Name>MusicStore.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

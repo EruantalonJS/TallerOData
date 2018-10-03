@@ -1,0 +1,1 @@
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\obj\Debug\MusicStore.DTO.csprojResolveAssemblyReference.cache
