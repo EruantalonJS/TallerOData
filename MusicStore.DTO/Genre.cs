@@ -28,20 +28,6 @@ namespace MusicStore.DTO
         private static Expression<Func<Data.Album, Album>> albumToDTO = DTO.Album.SelectAsDTO();
         private static Expression<Func<Album, Data.Album>> albumToData = DTO.Album.SelectAsData();
 
-        public static Expression<Func<Genre, Data.Genre>> SelectAsData()
-        {
-            return g => new Data.Genre
-            {
-                Guid = g.GenreId,
-                Name = g.Name,
-                Description = g.Description,
-                Albums = g.Albums
-                          .AsQueryable()
-                          .Select(albumToData)
-                          .ToList()
-            };
-        }
-
         public static Expression<Func<Data.Genre, Genre>> SelectAsDTO()
         {
             return g => new Genre
@@ -53,19 +39,19 @@ namespace MusicStore.DTO
                           .AsQueryable()
                           .Select(albumToDTO)
                           .ToList()
-            });
+            };
         }
 
-        public static Expression<Func<Data.Genre,bool>> FindEntity(Guid key)
+        public static Expression<Func<Data.Genre, bool>> FindEntity(Guid key)
         {
             return genre => genre.Guid == key;
         }
 
-        public Data.Genre ToData()
+        public void ToData(ref Data.Genre genreEntity)
         {
-            return Genre.SelectAsData()
-                        .Compile()
-                        .Invoke(this);
+            genreEntity.Guid = this.GenreId;
+            genreEntity.Name = this.Name;
+            genreEntity.Description = this.Description;
         }
 
         public static Genre FromData(Data.Genre genre)

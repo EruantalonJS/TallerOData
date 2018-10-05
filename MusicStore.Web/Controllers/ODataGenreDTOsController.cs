@@ -1,5 +1,6 @@
 ﻿using MusicStore.Data;
 using System;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
@@ -47,7 +48,7 @@ namespace MusicStore.Controllers.OData
 
             DTO.Genre currentEntity = DTO.Genre.FromData(entity);
             genre.Patch(currentEntity);
-            entity = currentEntity.ToData();
+            currentEntity.ToData(ref entity);
 
             try
             {
