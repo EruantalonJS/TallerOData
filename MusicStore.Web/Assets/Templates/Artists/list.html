@@ -1,0 +1,25 @@
+﻿<div ng-controller="artistListController">
+    <h4>Artists</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Artist Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="artist in artists">
+                <td>{{artist.name}}</td>
+                <td>
+                    <a href="#/artists/details/{{artist.artistId}}" class="btn btn-default btn-sm">Details</a>
+                    <button class="btn btn-danger btn-sm" ng-click="delete(artist)">Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <button class="btn btn-danger btn-sm" ng-click="create()">Add new artist</button>
+    <div ng-include="'/Assets/Templates/Artists/edit.html'"></div>
+
+</div>
+
