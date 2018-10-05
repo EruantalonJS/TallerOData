@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MusicStore</RootNamespace>
     <AssemblyName>MusicStore</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -149,6 +149,7 @@
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
+    <Compile Include="Controllers\ODataAlbumDTOsController.cs" />
     <Compile Include="Controllers\ODataGenreDTOsController.cs" />
     <Compile Include="Controllers\ODataGenresController.cs" />
     <Compile Include="Global.asax.cs">

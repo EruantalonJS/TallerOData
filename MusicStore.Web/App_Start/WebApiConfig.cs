@@ -26,6 +26,8 @@ namespace MusicStore
 
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Genre>("ODataGenres");
+            builder.EntitySet<DTO.Genre>("ODataGenreDTOs");
+            builder.EntitySet<DTO.Album>("ODataAlbumDTOs");
             var albumBuilder = builder.EntitySet<Album>("ODataAlbums").EntityType;
             albumBuilder.Ignore(a => a.Carts);
             albumBuilder.Ignore(a => a.OrderDetails);

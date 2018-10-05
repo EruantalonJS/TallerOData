@@ -1,4 +1,5 @@
 ﻿using MusicStore.Data;
+using System;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,23 +21,24 @@ namespace MusicStore.Controllers.OData
         }
 
         [EnableQuery]
-        public SingleResult<DTO.Genre> Get([FromODataUri] int key)
+        public SingleResult<DTO.Genre> Get([FromODataUri] Guid key)
         {
             IQueryable<DTO.Genre> result = dbContext.Genres
-                                                    .Where(p => p.GenreId == key)
-                                                    .Select(DTO.Genre.SelectAsDTO());
+                                                    .Select(DTO.Genre.SelectAsDTO())
+                                                    .Where(p => p.GenreId == key);
             return SingleResult.Create(result);
         }
 
         [EnableQuery]
-        public async Task<IHttpActionResult> Patch([FromODataUri] int key, Delta<DTO.Genre> genre)
+        public async Task<IHttpActionResult> Patch([FromODataUri] Guid key, Delta<DTO.Genre> genre)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var entity = await dbContext.Genres
-                                        .FindAsync(key);
+            var entity = dbContext.Genres
+                                  .Where(DTO.Genre.FindEntity(key))
+                                  .FirstOrDefault();
 
             if (entity == null)
             {

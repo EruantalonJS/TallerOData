@@ -1,1 +1,9 @@
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\MusicStore.DTO.dll
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\MusicStore.DTO.pdb
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\MusicStore.Data.dll
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\EntityFramework.dll
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\MusicStore.Data.pdb
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\bin\Debug\EntityFramework.xml
 C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\obj\Debug\MusicStore.DTO.csprojResolveAssemblyReference.cache
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\obj\Debug\MusicStore.DTO.dll
+C:\Users\imaria\Source\Repos\TallerOData\MusicStore.DTO\obj\Debug\MusicStore.DTO.pdb
