@@ -5,3 +5,5 @@
 /.vs
 /packages/EntityFramework.6.2.0/tools/EntityFramework.PowerShell.Utility.dll
 /packages
+/MusicStore.Data
+/MusicStore.DTO
