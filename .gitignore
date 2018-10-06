@@ -3,5 +3,7 @@
 ################################################################################
 
 /.vs
-/packages/EntityFramework.6.2.0/tools/EntityFramework.PowerShell.Utility.dll
-/packages
+/MusicStore.Data/bin/Debug
+/MusicStore.Data/obj/Debug
+/MusicStore.DTO/bin/Debug
+/MusicStore.DTO/obj/Debug
